@@ -40,8 +40,11 @@ console.log(typeof b)
 let c = true
 console.log(typeof c)
 
-let name = prompt()
-console.log(name)
+const first = prompt('Put your firstName')
+const last = prompt('Put your lastName')
+const age = +prompt('Put your age')
+
+console.log(`first: ${first} - Last: ${last} - Age: ${age})`)
 
 
 

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>owu.com.ua - OKTEN SCHOOL</title>
+</head>
+<body>
+
+<script>
+// !!!arrey base !!!
+//
+//     let arr;
+//
+//     arr = [123, 234, 345, -123, 0, true, 'asiugahd'];
+//     console.log(arr);
+//     console.log(arr[0]);
+//     console.log(arr[2]);
+//     console.log(arr[4]);
+//     console.log(arr.length);
+//
+//     arr[0] = 'new value';
+//     console.log(arr);
+//     arr[7] = 'okten';
+//     console.log(arr);// 8 7 8
+//     arr[arr.length] = 1293883;
+//     console.log(arr);
+//     arr[arr.length] = 'aiffysadf';
+//     console.log(arr);
+// arrey in arrey
+//     let arr = [
+//         //    0   1   2
+//         [11, 22, 33], // 0
+//         [], // 1
+//         [] // 2
+//     ];
+//     console.log(arr);
+//     //                           0  1  2
+//     let innerArray = arr[0]; // 11 22 33
+//     console.log(innerArray[1]); // 22
+//
+//     console.log(arr[0][1]);
+// objects create
+//
+// let user1 = {
+//     id: 1,
+//     name: 'vaysa',
+//     age: 31
+// }
+//
+// console.log(user1);
+let user1 = {
+    id: 1,
+    name: 'vaysa',
+    age: 31,
+    skills: ['html', 'js', 'java'],
+    wife: {
+        name: 'olya',
+        age: 28
+    }
+}
+let users = [
+    {skills: ['html', 'mysql', 'mongo'], id: 1, name: 'vasya', age: 31, status: true},
+    {skills: ['html', 'js'], id: 2, name: 'petya', age: 33, status: false},
+    {skills: ['html', 'js'], id: 3, name: 'anna', age: 28, status: true},
+    {skills: ['html', 'mysql', 'mongo'], id: 4, name: 'olya', age: 29, status: false}
+];
+console.log(users);
+let user0 = users[0];
+
+console.log(user0.age);
+console.log(user0['age']);
+
+console.log(users[0].skills[2]);
+console.log(users[0]['skills'][2]);
+console.log(users[0]['skills'][2]);
+
+let user = {
+    id: 1,
+    name: 'vasya',
+};
+
+user.age = 31;
+user['status'] = false;
+console.log(user);
+
+delete user.id;
+console.log(user);
+
+// number
+// string
+// boolean
+
+let a = 100;
+let b = a;
+b = b + 10; //110
+console.log(a); //100
+
+let user = {name: 'vasya'};
+let user2 = user;
+console.log(user2);
+user2.age = 31;
+console.log(user2);
+
+console.log(user);
+
+</script>
+</body>
+</html>
