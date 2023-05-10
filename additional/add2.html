@@ -3,22 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <title>Title</title>
+  <style>
+    .users-box{
+      display: inline-block;
+      margin-left: 90px;
+      margin-right: 90px;
+      margin-bottom: 30px;
+      margin-top: 30px;
+    }
+  </style>
 </head>
 <body>
 
 <!--template 1.1-->
-<div class="users-box">
-  <div class="user-block">
-    <h2>ID - NAME - USERNAME </h2>
-    <h3>EMAIL - PHONE</h3>
-    <div class="address-block">
-      <p>City - ADDRESS.CITY</p>
-      <p>Street - ADDRESS.STREET</p>
-      <p>Suite - ADDRESS.SUITE</p>
-      <p>Zip code - ADDRESS.ZIPCODE</p>
-    </div>
+<!--<div class="users-box">-->
+<!--  <div class="user-block">-->
+<!--    <h2>ID - NAME - USERNAME </h2>-->
+<!--    <h3>EMAIL - PHONE</h3>-->
+<!--    <div class="address-block">-->
+<!--      <p>City - ADDRESS.CITY</p>-->
+<!--      <p>Street - ADDRESS.STREET</p>-->
+<!--      <p>Suite - ADDRESS.SUITE</p>-->
+<!--      <p>Zip code - ADDRESS.ZIPCODE</p>-->
+<!--    </div>-->
 
-  </div>
+<!--  </div>-->
 
   <!--
 
@@ -30,7 +39,7 @@
   -->
 
 
-</div>
+/
 
 
 <script>
@@ -271,9 +280,22 @@
       }
     }
   ];
+  for (let userList of usersList) {
 
+    document.write(`<div class="users-box">
+              <div class="user-block">
+              <h2>${userList.id} - ${userList.name} - ${userList.username}</h2>
+              <h3>${userList.email} - ${userList.phone}</h3>
+    <div class="address-block">
+      <p>City - ${userList.address.city}</p>
+      <p>Street - ${userList.address.street}</p>
+      <p>Suite - ${userList.address.suite}</p>
+      <p>Zip code - ${userList.address.zipcode} </p>
+    </div>
+  </div>
+                        </div>`);
+  }
 
 </script>
-
 </body>
 </html>
