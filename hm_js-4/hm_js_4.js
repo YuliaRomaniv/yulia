@@ -82,14 +82,14 @@
 // - створити функцію яка приймає масив об'єктів з наступними полями id,name,age , та виводить їх в документ. Для кожного об'єкту окремий блок.
 //
 // document.write(`8------------------8`)
-// let users = [
-//     {name: 'vasya', age: 31, id: 1},
-//     {name: 'petya', age: 30, id: 2},
-//     {name: 'kolya', age: 29, id: 3},
-//     {name: 'olya', age: 28, id: 4},
-//     {name: 'max', age: 30, id: 5},
-//
-// ];
+let users = [
+    {name: 'vasya', age: 31, id: 1},
+    {name: 'petya', age: 30, id: 2},
+    {name: 'kolya', age: 29, id: 3},
+    {name: 'olya', age: 28, id: 4},
+    {name: 'max', age: 30, id: 5},
+
+];
 // function printerArrayOfObj(array) {
 //     for (const users of array){
 //         document.write(`<div>${users.id} ${users.name} ${ users.age} </div>`);
@@ -101,15 +101,15 @@
 // /
 // const ArrayOfNumbers = [11,-22,9,-58,55,10];
 // function ArrayMin(arr){
-//     let result = arr[0];
-//     for ( let i = 0; i < arr.length; i++) {
-//         if ( result > arr[i]){
-//             result = arr[i];
-//         }
-//     }
-//     return result;
-// }
-// console.log(ArrayMin(ArrayOfNumbers));
+    let result = arr[0];
+    for ( let i = 0; i < arr.length; i++) {
+        if ( result > arr[i]){
+            result = arr[i];
+        }
+    }
+    return result;
+}
+console.log(ArrayMin(ArrayOfNumbers));
 // - створити функцію sum(arr), ка приймає масив чиселб сумує значення елементів масиву та повертає його. Приклад sum([1,2,10])
 //  function sum(arr){
 //     let result = 0;
