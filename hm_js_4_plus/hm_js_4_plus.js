@@ -57,20 +57,27 @@
 // }
 // console.log(ddd([5, 10, 15, 30]))
 // - створити функцію яка приймає будь-яку кількість чисел, повертає найменьше, а виводить найбільше (Math використовувати заборонено);
-    function ArrayMax(arr){
-    let result = arr[0];
-    for ( let i = 0; i < arr.length; i++) {
-            if ( result < arr[i]) {
-                result = arr[i];
-                return result;
-            }
-            else  {
-            console.log(arr);
-        }
-        }
-    return result;
-}
-console.log(ArrayMax([5, -5 , -15, 10 , 100]));
+//    const  ArrayOfNumber1 = [5, -5 , -15, 10 , 100]
+//    function ArrayMax(arr){
+//     let min = arr[0];
+//     let max = 0;
+//     for ( let i = 0; i < arr.length; i++) {
+//             if ( arr[i] < min)
+//                min = arr[i];
+//             if ( arr[i] > max){
+//                max = arr[i];
+//                console.log(max)
+//             }
+//
+//         }
+//     return min;
+//
+//
+// }
+//
+// console.log(ArrayMax(ArrayOfNumber1));
+
+
 
 // - створити функцію яка заповнює масив рандомними числами
 // (цей код генерує рандомні числа в діапазоні від 0 до 100 - Math.round(Math.random()*100)) та виводить його.

@@ -60,25 +60,24 @@
 // }
 // writerLi(`hello Diana`);
 // - створити функцію яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий. Кількість li визначається другим аргументом, який є числовим (тут використовувати цикл)
-// function writerLi(li, number) {
-//     document.write(`<ul>
-//      <li>${li} ${1}</li>
-//      <li>${li} ${2}</li>
-//      <li>${li} ${3}</li>
-//      </ul>`);
-// }
-// writerLi(`hello Diana`);
-// - створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список
-// function printerArray( name, age, status ) {
-//     document.write(`<ul>
-//      <li>${name} ${age} ${status}</li>
-//      </ul>`);
+// function writerLi(text, count) {
+//     document.write(`<ul>`);
+//     for (let i = 0; i< count; i ++){
+//         document.write(`<li>${text}</li>`)
 //     }
-//
-// printerArray(`Yulia`, 32, true);
-// printerArray(`Diana`, 29, false);
-// printerArray(`Ira`, 27, true);
-// printerArray(`Stas`, 23, false);
+//     document.write(`</ul>`)
+// }
+// writerLi(`Hello Diana`, 2);
+// - створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список
+// const  arr = [25, -125, `Diana`, true, 125, `Romaniv`]
+// function writerLi1(text) {
+//     document.write(`<ul>`);
+//     for (const item of arr){
+//         document.write(`<li>${item}</li>`)
+//     }
+//     document.write(`</ul>`)
+// }
+// writerLi1(arr);
 
 // - створити функцію яка приймає масив об'єктів з наступними полями id,name,age , та виводить їх в документ. Для кожного об'єкту окремий блок.
 //
@@ -111,7 +110,15 @@
 //     return result;
 // }
 // console.log(ArrayMin(ArrayOfNumbers));
-
+// - створити функцію sum(arr), ка приймає масив чиселб сумує значення елементів масиву та повертає його. Приклад sum([1,2,10])
+//  function sum(arr){
+//     let result = 0;
+//     for(const  number of arr){
+//         result += number;
+//     }
+//     return result
+//  }
+//  console.log(sum([1, 2, 10]))
 
 // - створити функцію swap(arr,index1,index2). Функція міняє місцями заняення у відаовідних індексах
 // Приклад  swap([11,22,33,44],0,1) //=> [22,11,33,44]
