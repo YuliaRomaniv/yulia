@@ -28,12 +28,12 @@
 // console.log(str);
 //
 // // - Напишіть функцію stringToarray(str), яка перетворює рядок на масив слів.
-// //     let str = 'Ревуть воли як ясла повні';
-// // let arr = stringToarray(str); ['Ревуть', 'воли', 'як', 'ясла', 'повні']
-// let str2 = 'Ревуть воли як ясла повні';
-//
-// const arr =  str2.split( ` `);
-// console.log(arr);
+//     let str = 'Ревуть воли як ясла повні';
+// let arr = stringToarray(str); ['Ревуть', 'воли', 'як', 'ясла', 'повні']
+let str2 = 'Ревуть воли як ясла повні';
+
+const arr =  str2.split( ` `);
+console.log(arr);
 //
 // // є масив чисел [10,8,-7,55,987,-1011,0,1050,0] . за допомоги map  перетворити всі об'єкти в масиві на стрінгові.
 // let arr1 = [10,8,-7,55,987,-1011,0,1050,0];
@@ -97,59 +97,59 @@
 
 // =========================
 //     описати колоду карт (від 6 до туза без джокерів)
-const cards = [
-    { cardSuit: 'spade', value: '6', color: 'black' },
-    { cardSuit: 'diamond', value: '6', color: 'red' },
-    { cardSuit: 'heart', value: '6', color: 'red' },
-    { cardSuit: 'clubs', value: '6', color: 'black' },
-    { cardSuit: 'spade', value: '7', color: 'black' },
-    { cardSuit: 'diamond', value: '7', color: 'red' },
-    { cardSuit: 'heart', value: '7', color: 'red' },
-    { cardSuit: 'clubs', value: '7', color: 'black' },
-    { cardSuit: 'spade', value: '8', color: 'black' },
-    { cardSuit: 'diamond', value: '8', color: 'red' },
-    { cardSuit: 'heart', value: '8', color: 'red' },
-    { cardSuit: 'clubs', value: '8', color: 'black' },
-    { cardSuit: 'spade', value: '9', color: 'black' },
-    { cardSuit: 'diamond', value: '9', color: 'red' },
-    { cardSuit: 'heart', value: '9', color: 'red' },
-    { cardSuit: 'clubs', value: '9', color: 'black' },
-    { cardSuit: 'spade', value: '10', color: 'black' },
-    { cardSuit: 'diamond', value: '10', color: 'red' },
-    { cardSuit: 'heart', value: '10', color: 'red' },
-    { cardSuit: 'clubs', value: '10', color: 'black' },
-    { cardSuit: 'spade', value: 'jack', color: 'black' },
-    { cardSuit: 'diamond', value: 'jack', color: 'red' },
-    { cardSuit: 'heart', value: 'jack', color: 'red' },
-    { cardSuit: 'clubs', value: 'jack', color: 'black' },
-    { cardSuit: 'spade', value: 'queen', color: 'black' },
-    { cardSuit: 'diamond', value: 'queen', color: 'red' },
-    { cardSuit: 'heart', value: 'queen', color: 'red' },
-    { cardSuit: 'clubs', value: 'queen', color: 'black' },
-    { cardSuit: 'spade', value: 'king', color: 'black' },
-    { cardSuit: 'diamond', value: 'king', color: 'red' },
-    { cardSuit: 'heart', value: 'king', color: 'red' },
-    { cardSuit: 'clubs', value: 'king', color: 'black' },
-    { cardSuit: 'spade', value: 'ace', color: 'black' },
-    { cardSuit: 'diamond', value: 'ace', color: 'red' },
-    { cardSuit: 'heart', value: 'ace', color: 'red' },
-    { cardSuit: 'clubs', value: 'ace', color: 'black' },
-];
+// const cards = [
+//     { cardSuit: 'spade', value: '6', color: 'black' },
+//     { cardSuit: 'diamond', value: '6', color: 'red' },
+//     { cardSuit: 'heart', value: '6', color: 'red' },
+//     { cardSuit: 'clubs', value: '6', color: 'black' },
+//     { cardSuit: 'spade', value: '7', color: 'black' },
+//     { cardSuit: 'diamond', value: '7', color: 'red' },
+//     { cardSuit: 'heart', value: '7', color: 'red' },
+//     { cardSuit: 'clubs', value: '7', color: 'black' },
+//     { cardSuit: 'spade', value: '8', color: 'black' },
+//     { cardSuit: 'diamond', value: '8', color: 'red' },
+//     { cardSuit: 'heart', value: '8', color: 'red' },
+//     { cardSuit: 'clubs', value: '8', color: 'black' },
+//     { cardSuit: 'spade', value: '9', color: 'black' },
+//     { cardSuit: 'diamond', value: '9', color: 'red' },
+//     { cardSuit: 'heart', value: '9', color: 'red' },
+//     { cardSuit: 'clubs', value: '9', color: 'black' },
+//     { cardSuit: 'spade', value: '10', color: 'black' },
+//     { cardSuit: 'diamond', value: '10', color: 'red' },
+//     { cardSuit: 'heart', value: '10', color: 'red' },
+//     { cardSuit: 'clubs', value: '10', color: 'black' },
+//     { cardSuit: 'spade', value: 'jack', color: 'black' },
+//     { cardSuit: 'diamond', value: 'jack', color: 'red' },
+//     { cardSuit: 'heart', value: 'jack', color: 'red' },
+//     { cardSuit: 'clubs', value: 'jack', color: 'black' },
+//     { cardSuit: 'spade', value: 'queen', color: 'black' },
+//     { cardSuit: 'diamond', value: 'queen', color: 'red' },
+//     { cardSuit: 'heart', value: 'queen', color: 'red' },
+//     { cardSuit: 'clubs', value: 'queen', color: 'black' },
+//     { cardSuit: 'spade', value: 'king', color: 'black' },
+//     { cardSuit: 'diamond', value: 'king', color: 'red' },
+//     { cardSuit: 'heart', value: 'king', color: 'red' },
+//     { cardSuit: 'clubs', value: 'king', color: 'black' },
+//     { cardSuit: 'spade', value: 'ace', color: 'black' },
+//     { cardSuit: 'diamond', value: 'ace', color: 'red' },
+//     { cardSuit: 'heart', value: 'ace', color: 'red' },
+//     { cardSuit: 'clubs', value: 'ace', color: 'black' },
+// ];
 // - знайти піковий туз
-const card1 = cards.find((card) => card.cardSuit === `spade` && card.value ===`ace`);
-console.log(card1);
-// - всі шістки
-const card2 = cards.filter((card) =>  card.value ===`6`);
-console.log(card2);
-// - всі червоні карти
-const card3 = cards.filter((card) =>  card.color ===`red`);
-console.log(card3);
-// - всі буби
-const card4 = cards.filter((card) =>  card.cardSuit ===`diamond`);
-console.log(card4);
-// - всі трефи від 9 та більше
-const card5 = cards.filter((card) =>  ['9',`10`,'jack','queen','king', 'ace'].includes(card.value) && card.cardSuit ===`clubs`);
-console.log(card5);
+// const card1 = cards.find((card) => card.cardSuit === `spade` && card.value ===`ace`);
+// console.log(card1);
+// // - всі шістки
+// const card2 = cards.filter((card) =>  card.value ===`6`);
+// console.log(card2);
+// // - всі червоні карти
+// const card3 = cards.filter((card) =>  card.color ===`red`);
+// console.log(card3);
+// // - всі буби
+// const card4 = cards.filter((card) =>  card.cardSuit ===`diamond`);
+// console.log(card4);
+// // - всі трефи від 9 та більше
+// const card5 = cards.filter((card) =>  ['9',`10`,'jack','queen','king', 'ace'].includes(card.value) && card.cardSuit ===`clubs`);
+// console.log(card5);
 // {
 //     cardSuit: '', // 'spade', 'diamond','heart', 'clubs'
 //         value: '', // '6'-'10', 'ace','jack','queen','king','joker'
