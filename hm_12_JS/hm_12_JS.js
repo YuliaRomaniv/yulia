@@ -21,6 +21,9 @@ function createUserLinks(users) {
         });
         listItem.appendChild(link);
         userLinks.appendChild(listItem);
+        link.onclick = () =>{
+            location.href = `user-details..html?userId=${user.id}`
+        }
     });
 }
 
