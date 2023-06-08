@@ -1,0 +1,27 @@
+/*Стилизація проєкта -*/
+/*index.html - всі блоки з user - по 2 в рядок. кнопки/аосилвння розташувати під інформацією про user.*/
+
+div{
+    border: lightseagreen solid 2px;
+    background-color: lightcyan;
+    color: grey;
+    font-size: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+
+button{
+    border: greenyellow 2px;
+    border-radius: 20px;
+    background-color: lawngreen;
+    color: black;
+    font-size: 20px;
+    height: 35px;
+    width: 150px;
+    margin: 15px;
+    padding: 5px;
+}
+

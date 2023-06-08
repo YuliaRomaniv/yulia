@@ -1,4 +1,6 @@
 
+// при кліку на посилання перехід на відповідну сторінку, на якій буде вся інформація про користувача (всі 15 полів) отримана через додатковий запит (https://jsonplaceholder.typicode.com/users/XXX   ХХХ - айді користувача)
+
 const  userId = new URL (location.href).searchParams.get('userId')
 
     fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)

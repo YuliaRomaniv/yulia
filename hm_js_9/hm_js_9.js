@@ -149,99 +149,125 @@ for (const  item of coursesAndDurationArray2) {
 // Створити для кожного елементу масиву свій блок, блок розділити блоками, в яких будуть зберігатись значення окремих властивостей, для властивості modules зробити список з елементами
 // Приклад структири знаходиться у файлі example.png який лежить в папці з поточним фйлом
 // ------------------
-const coursesArray = [
-    {
-        title: 'JavaScript Complex',
-        monthDuration: 5,
-        hourDuration: 909,
-        modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'node.js']
-    },
-    {
-        title: 'Java Complex',
-        monthDuration: 6,
-        hourDuration: 909,
-        modules: ['html',
-            'css',
-            'js',
-            'mysql',
-            'mongodb',
-            'angular',
-            'aws',
-            'docker',
-            'git',
-            'java core',
-            'java advanced']
-    },
-    {
-        title: 'Python Complex',
-        monthDuration: 6,
-        hourDuration: 909,
-        modules: ['html',
-            'css',
-            'js',
-            'mysql',
-            'mongodb',
-            'angular',
-            'aws',
-            'docker',
-            'python core',
-            'python advanced']
-    },
-    {
-        title: 'QA Complex',
-        monthDuration: 4,
-        hourDuration: 909,
-        modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'git', 'QA/QC']
-    },
-    {
-        title: 'FullStack',
-        monthDuration: 7,
-        hourDuration: 909,
-        modules: ['html',
-            'css',
-            'js',
-            'mysql',
-            'mongodb',
-            'react',
-            'angular',
-            'aws',
-            'docker',
-            'git',
-            'node.js',
-            'python',
-            'java']
-    },
-    {
-        title: 'Frontend',
-        monthDuration: 4,
-        hourDuration: 909,
-        modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'sass']
-    }
-];
-for (const  item of coursesArray) {
-    const block = document.createElement('div');
-    const title = document.createElement('h1');
-    const durationsWrapper = document.createElement('div');
-    const monthDuration = document.createElement('div');
-    const hourDuration = document.createElement('div');
-    const modules = document.createElement('ul');
+// const coursesArray = [
+//     {
+//         title: 'JavaScript Complex',
+//         monthDuration: 5,
+//         hourDuration: 909,
+//         modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'node.js']
+//     },
+//     {
+//         title: 'Java Complex',
+//         monthDuration: 6,
+//         hourDuration: 909,
+//         modules: ['html',
+//             'css',
+//             'js',
+//             'mysql',
+//             'mongodb',
+//             'angular',
+//             'aws',
+//             'docker',
+//             'git',
+//             'java core',
+//             'java advanced']
+//     },
+//     {
+//         title: 'Python Complex',
+//         monthDuration: 6,
+//         hourDuration: 909,
+//         modules: ['html',
+//             'css',
+//             'js',
+//             'mysql',
+//             'mongodb',
+//             'angular',
+//             'aws',
+//             'docker',
+//             'python core',
+//             'python advanced']
+//     },
+//     {
+//         title: 'QA Complex',
+//         monthDuration: 4,
+//         hourDuration: 909,
+//         modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'git', 'QA/QC']
+//     },
+//     {
+//         title: 'FullStack',
+//         monthDuration: 7,
+//         hourDuration: 909,
+//         modules: ['html',
+//             'css',
+//             'js',
+//             'mysql',
+//             'mongodb',
+//             'react',
+//             'angular',
+//             'aws',
+//             'docker',
+//             'git',
+//             'node.js',
+//             'python',
+//             'java']
+//     },
+//     {
+//         title: 'Frontend',
+//         monthDuration: 4,
+//         hourDuration: 909,
+//         modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'sass']
+//     }
+// ];
+// for (const  item of coursesArray) {
+//     const block = document.createElement('div');
+//     const title = document.createElement('h1');
+//     const durationsWrapper = document.createElement('div');
+//     const monthDuration = document.createElement('div');
+//     const hourDuration = document.createElement('div');
+//     const modules = document.createElement('ul');
+//
+//
+//     title.innerText = item.title;
+//     monthDuration.innerText = item.monthDuration;
+//     hourDuration.innerText = item.hourDuration;
+//
+//     for (const module of item.modules) {
+//         const li = document.createElement('li');
+//         li.innerText = module;
+//         modules.appendChild(li);
+//     }
+//     block.classList.add('wrapper');
+//     title.classList.add('text-content');
+//
+//     durationsWrapper.append(monthDuration, hourDuration);
+//     block.append(title, durationsWrapper, modules);
+//     document.body.appendChild(block);
+// }
+//
 
+fetch('https://jsonplaceholder.typicode.com/users')
+    .then(response => response.json())
+    .then((users) => {
+        const userListBlock = document.getElementById('List');
+        users.forEach((user)=> {
+            const userBlock = document.createElement('div');
+            const userId = document.createElement('p');
+            userId.innerText = `ID: ${user.id}`;
+            const userName = document.createElement('p');
+            userName.innerText = `Name: ${user.name}`;
+            userBlock.appendChild(userId);
+            userBlock.appendChild(userName);
 
-    title.innerText = item.title;
-    monthDuration.innerText = item.monthDuration;
-    hourDuration.innerText = item.hourDuration;
+            const button = document.createElement('button');
+            button.innerText = 'More info';
+            button.onclick = () => {
+                location.href = `user-details.html?userId=${user.id}`;
+            };
+            userBlock.appendChild(button);
 
-    for (const module of item.modules) {
-        const li = document.createElement('li');
-        li.innerText = module;
-        modules.appendChild(li);
-    }
-    block.classList.add('wrapper');
-    title.classList.add('text-content');
-
-    durationsWrapper.append(monthDuration, hourDuration);
-    block.append(title, durationsWrapper, modules);
-    document.body.appendChild(block);
-}
-
-
+            userListBlock.appendChild(userBlock);
+        });
+    })
+    .catch(error => {
+        console.log(error);
+    });
