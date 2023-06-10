@@ -1,27 +1,52 @@
 /*Стилизація проєкта -*/
 /*index.html - всі блоки з user - по 2 в рядок. кнопки/аосилвння розташувати під інформацією про user.*/
+body{
+    background: lightcyan;
+    height: 100vh;
+    width: 100vw;
 
-div{
-    border: lightseagreen solid 2px;
-    background-color: lightcyan;
-    color: grey;
-    font-size: 20px;
-    display: flex;
+}
+h1{ display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+    margin: 15px;
 
 }
 
+.user-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 
-button{
-    border: greenyellow 2px;
-    border-radius: 20px;
-    background-color: lawngreen;
-    color: black;
-    font-size: 20px;
-    height: 35px;
-    width: 150px;
+
+}
+
+.user-box {
+    width: 40%;
     margin: 15px;
+    padding: 15px;
+    border: 1px solid cornflowerblue;
+    border-radius: 5px;
+    font-size: 20px;
+    background: lightskyblue;
+}
+
+.user-box h2, .user-box h3 {
+    margin: 0;
+
+}
+
+.user-box button {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    color: #fff;
+    background-color: cornflowerblue;
     padding: 5px;
+    border-radius: 5px;
+    border:2px solid lightskyblue ;
+    text-decoration: none;
+    width: 50%;
+    font-size: 20px;
 }
 
