@@ -245,29 +245,5 @@ for (const  item of coursesAndDurationArray2) {
 // }
 //
 
-fetch('https://jsonplaceholder.typicode.com/users')
-    .then(response => response.json())
-    .then((users) => {
-        const userListBlock = document.getElementById('List');
-        users.forEach((user)=> {
-            const userBlock = document.createElement('div');
-            const userId = document.createElement('p');
-            userId.innerText = `ID: ${user.id}`;
-            const userName = document.createElement('p');
-            userName.innerText = `Name: ${user.name}`;
-            userBlock.appendChild(userId);
-            userBlock.appendChild(userName);
-
-            const button = document.createElement('button');
-            button.innerText = 'More info';
-            button.onclick = () => {
-                location.href = `user-details.html?userId=${user.id}`;
-            };
-            userBlock.appendChild(button);
-
-            userListBlock.appendChild(userBlock);
-        });
-    })
-    .catch(error => {
-        console.log(error);
-    });
+// В index.html
+// 1 отримати масив об'єктів з endpoint`а https://jsonplaceholder.typicode.com/users
