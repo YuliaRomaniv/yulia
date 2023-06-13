@@ -3,7 +3,7 @@
 //         вивести їх id + name списком та додати посилання з href = user-details.html?id=XXX (замість ХХХ - айді юзера)
 
 function getUsers() {
-    return fetch('http://jsonplaceholder.typicode.com/users')
+    return fetch('https://jsonplaceholder.typicode.com/users')
         .then(value => value.json())
         .then(value => value);
 }
@@ -39,6 +39,5 @@ function fetchUserDetails(userId) {
 getUsers()
     .then(users => createUserLinks(users))
     .catch(error => console.error(error));
-
 
 

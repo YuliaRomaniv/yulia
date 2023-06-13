@@ -3,15 +3,15 @@
 
 const  userId = new URL (location.href).searchParams.get('userId')
 
-    fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
-        .then(value => value.json())
-        .then((user) => {
-            console.log(user)
-            const block = document.getElementsByClassName('wrap')[0];
-            const ul = document.createElement('ul');
-            recursiveBuild(user, ul);
-            block.appendChild(ul);
-        })
+fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
+    .then(value => value.json())
+    .then((user) => {
+        console.log(user)
+        const block = document.getElementsByClassName('wrap')[0];
+        const ul = document.createElement('ul');
+        recursiveBuild(user, ul);
+        block.appendChild(ul);
+    })
 
 
 function createUserLinks(key, value, parent) {
@@ -30,7 +30,7 @@ function  ulBuilder(key, object, parent){
 function recursiveBuild(object, parent){
     for (const key in object){
         typeof object[key] === 'object'
-        ? ulBuilder(key,object[key], parent)
-        : createUserLinks(key, object[key], parent)
+            ? ulBuilder(key,object[key], parent)
+            : createUserLinks(key, object[key], parent)
     }
 }

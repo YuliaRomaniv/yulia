@@ -1,2 +1,69 @@
 /*post-details.html - блок з інфою про пост зверху. Коментарі - по 4 в ряд. */
 /*Всі елементи котрі характеризують users, posts, comments візуалізувати, так, щоб було видно що це блоки (дати фон. марджини і тд)*/
+body {
+    font-family: Arial, sans-serif;
+    background-color: lightcyan;
+    margin: 0;
+    padding: 20px;
+}
+h1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 15px;
+}
+
+.postDetailsBlock {
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 2px solid cornflowerblue;
+    border-radius: 5px;
+    font-size: 20px;
+    background: lightskyblue;
+    width: 90%;
+    justify-content: center;
+    display: flex;
+}
+
+.postCommentsBlock {
+    padding: 20px;
+}
+
+.commentBlock {
+    background-color: lightgreen;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+    width: calc(25% - 20px);
+    height: 250px;
+    float: left;
+    box-sizing: border-box;
+    margin-right:20px;
+    font-size: 17px;
+}
+
+.commentBlock:last-child {
+    margin-right: 0;
+}
+
+.commentBlock p {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .commentBlock {
+        width: calc(50% - 20px);
+        margin-right: 20px;
+    }
+
+    .commentBlock:nth-child(2n+2) {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .commentBlock {
+        width: 100%;
+        margin-right: 0;
+    }
+}
