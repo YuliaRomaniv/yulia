@@ -1,34 +1,32 @@
 /*Стилизація проєкта -*/
 /*index.html - всі блоки з user - по 2 в рядок. кнопки/аосилвння розташувати під інформацією про user.*/
 body{
-    background: lightcyan;
+    background: white;
     height: 100vh;
     width: 100vw;
+    margin: 0;
 
 }
 h1{ display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    margin: 15px;
-
+    margin: 20px;
+    font-size: 40px;
 }
 
 .user-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-
-
 }
 
 .user-box {
     width: 40%;
-    margin: 15px;
+    margin: 10px;
     padding: 15px;
-    border: 1px solid cornflowerblue;
-    border-radius: 5px;
+    border: 1px solid #779f1f;
+    border-radius: 10px;
     font-size: 20px;
-    background: lightskyblue;
+    background: #c5e97a;
 }
 
 .user-box h2, .user-box h3 {
@@ -40,13 +38,13 @@ h1{ display: flex;
     display: block;
     margin-top: 10px;
     text-align: center;
-    color: #fff;
-    background-color: cornflowerblue;
+    color: white;
+    background-color: #779f1f;
     padding: 5px;
-    border-radius: 5px;
-    border:2px solid lightskyblue ;
+    border-radius: 20px;
+    border:2px solid #497406;
     text-decoration: none;
-    width: 50%;
+    width: 45%;
     font-size: 20px;
 }
 

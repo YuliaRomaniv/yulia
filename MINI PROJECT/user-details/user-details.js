@@ -5,8 +5,8 @@
 //     6 Каждому посту додати кнопку/посилання, при кліку на яку відбувається перехід на сторінку post-details.html, котра має детальну інфу про поточний пост.
 
 
-let userId = 'string';
- userId = new URL(location.href).searchParams.get('userId')
+
+ let userId = new URL(location.href).searchParams.get('userId')
 
 fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
     .then(value => value.json())
@@ -58,6 +58,7 @@ function displayUserPosts() {
                 const postLink = document.createElement('a');
                 postLink.href = `../post-details/post-details.html?postId=${postId}`;
                 postLink.innerText = postTitle;
+
                 postDiv.appendChild(postLink);
                 userPostsDiv.appendChild(postDiv);
             });

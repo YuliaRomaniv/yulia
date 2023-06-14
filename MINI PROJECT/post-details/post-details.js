@@ -25,9 +25,7 @@ fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`)
         postDiv.appendChild(postContent);
         postDetailsDiv.appendChild(postDiv);
     })
-    .catch(error => {
-        console.log('Error:', error);
-    });
+
 
 fetch(`https://jsonplaceholder.typicode.com/posts/${postId}/comments`)
     .then(response => response.json())
@@ -54,6 +52,3 @@ fetch(`https://jsonplaceholder.typicode.com/posts/${postId}/comments`)
             postCommentsDiv.appendChild(commentDiv);
         });
     })
-    .catch(error => {
-        console.log('Error:', error);
-    });
