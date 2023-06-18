@@ -45,31 +45,27 @@
 </div>
 
 <script>
-    // написати рекурсивну функцію, яка збирає всі назви класів з файлу rules.html в окремий масив. масив вивести в консоль
-    // let rules= [];
-    // let heading= [];
-    // function explorer (htmlElement) {
-    //     let children = htmlElement.children;
-    //     if (children.length === 0) {
-    //         for (const child of children)
-    //             explorer(children);
-    //     }
-    //     if( child.tagName() ==='h2') {
-    //         for (const child of children)
-    //             rules.push(child)
-    //
-    //         } else if (child.tagName() ==='p'){
-    //         for (const child of children)
-    //         heading.push(child)
-    //     }
-    //
-    //         }
-    //
-    // explorer(document.body);
-    // console.log(rules);
-    // console.log(heading);
-    //
-    // explorer(document.body);
+
+    function collectClassNames(element, classNames) {
+        if (element.classList && element.classList.length > 0) {
+            for (let i = 1; i < element.classList.length; i++) {
+                const className = element.classList[i];
+                if (!classNames.includes(className)) {
+                    classNames.push(className);
+                }
+            }
+        }
+
+        const children = element.children;
+        for (let i = 0; i < children.length; i++) {
+            collectClassNames(children[i], classNames);
+        }
+    }
+
+    const classNames = [];
+    const rootElement = document.documentElement;
+    collectClassNames(rootElement, classNames);
+    console.log(classNames);
 
 </script>
 </body>
